@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 
 namespace EditorAPI
 {
@@ -23,10 +24,12 @@ namespace EditorAPI
         {
             if (env.IsDevelopment())
             {
+                ////logger.LogInformation(env.EnvironmentName);
                 app.UseDeveloperExceptionPage();
             }
 
             app.UseMvc();
+            app.UseStaticFiles();
 
             app.Run(async (context) =>
             {

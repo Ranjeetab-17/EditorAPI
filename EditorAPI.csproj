@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="XMLs\" />
     <Folder Include="wwwroot\" />
   </ItemGroup>
 
