@@ -6,3 +6,64 @@
 2019-09-03 19:50:51.743 +05:30 [Information] Route matched with "{action = \"GetContent\", controller = \"Editor\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult GetContent()" on controller "EditorAPI.controllers.EditorController" ("EditorAPI").
 2019-09-03 19:50:51.777 +05:30 [Information] Executing action method "EditorAPI.controllers.EditorController.GetContent (EditorAPI)" - Validation state: Valid
 2019-09-03 19:51:26.083 +05:30 [Verbose] Editor API called
+2019-09-03 20:00:54.833 +05:30 [Information] Request starting HTTP/1.1 DEBUG http://localhost:60837/  0
+2019-09-03 20:00:54.833 +05:30 [Information] Request starting HTTP/1.1 GET http://localhost:60837/  
+2019-09-03 20:00:55.040 +05:30 [Information] Request finished in 191.0581ms 200 
+2019-09-03 20:00:55.389 +05:30 [Information] Request finished in 582.7864ms 404 
+2019-09-03 20:00:55.597 +05:30 [Information] Request starting HTTP/1.1 GET http://localhost:60837/favicon.ico  
+2019-09-03 20:00:55.610 +05:30 [Information] Request finished in 24.056ms 404 
+2019-09-03 20:03:19.451 +05:30 [Information] Request starting HTTP/1.1 GET http://localhost:60837/api/editor  
+2019-09-03 20:03:19.577 +05:30 [Information] Route matched with "{action = \"GetContent\", controller = \"Editor\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult GetContent()" on controller "EditorAPI.controllers.EditorController" ("EditorAPI").
+2019-09-03 20:03:19.707 +05:30 [Information] Executing action method "EditorAPI.controllers.EditorController.GetContent (EditorAPI)" - Validation state: Valid
+2019-09-03 20:04:04.827 +05:30 [Verbose] Editor API called
+2019-09-03 20:04:05.044 +05:30 [Error] Error occured
+System.Exception: Error occured
+   at EditorAPI.controllers.EditorController.GetContent() in D:\EditorApp\EditorAPI\controllers\EditorController.cs:line 27
+2019-09-03 20:04:05.205 +05:30 [Information] Executed action method "EditorAPI.controllers.EditorController.GetContent (EditorAPI)", returned result "Microsoft.AspNetCore.Mvc.OkResult" in 45470.1377ms.
+2019-09-03 20:04:05.232 +05:30 [Information] Executing HttpStatusCodeResult, setting HTTP status code 200
+2019-09-03 20:04:05.253 +05:30 [Information] Executed action "EditorAPI.controllers.EditorController.GetContent (EditorAPI)" in 45655.7787ms
+2019-09-03 20:04:05.263 +05:30 [Information] Request finished in 45822.1255ms 200 
+2019-09-03 20:06:24.478 +05:30 [Information] Request starting HTTP/1.1 GET http://localhost:60837/api/editor  
+2019-09-03 20:06:24.489 +05:30 [Information] Route matched with "{action = \"GetContent\", controller = \"Editor\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult GetContent()" on controller "EditorAPI.controllers.EditorController" ("EditorAPI").
+2019-09-03 20:06:24.496 +05:30 [Information] Executing action method "EditorAPI.controllers.EditorController.GetContent (EditorAPI)" - Validation state: Valid
+2019-09-03 20:06:24.498 +05:30 [Verbose] Editor API called
+2019-09-03 20:06:24.655 +05:30 [Error] Error occured
+System.Exception: Error occured
+   at EditorAPI.controllers.EditorController.GetContent() in D:\EditorApp\EditorAPI\controllers\EditorController.cs:line 27
+2019-09-03 20:06:24.723 +05:30 [Information] Executed action method "EditorAPI.controllers.EditorController.GetContent (EditorAPI)", returned result "Microsoft.AspNetCore.Mvc.OkResult" in 161.3632ms.
+2019-09-03 20:06:24.822 +05:30 [Information] Executing HttpStatusCodeResult, setting HTTP status code 200
+2019-09-03 20:06:24.856 +05:30 [Information] Executed action "EditorAPI.controllers.EditorController.GetContent (EditorAPI)" in 334.6051ms
+2019-09-03 20:06:24.877 +05:30 [Information] Request finished in 402.3142ms 200 
+2019-09-03 20:08:00.604 +05:30 [Information] Request starting HTTP/1.1 GET http://localhost:60837/api/editor  
+2019-09-03 20:08:00.610 +05:30 [Information] Route matched with "{action = \"GetContent\", controller = \"Editor\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult GetContent()" on controller "EditorAPI.controllers.EditorController" ("EditorAPI").
+2019-09-03 20:08:00.616 +05:30 [Information] Executing action method "EditorAPI.controllers.EditorController.GetContent (EditorAPI)" - Validation state: Valid
+2019-09-03 20:08:00.617 +05:30 [Verbose] Editor API called
+2019-09-03 20:08:00.899 +05:30 [Error] Error occured
+System.Exception: Error occured
+   at EditorAPI.controllers.EditorController.GetContent() in D:\EditorApp\EditorAPI\controllers\EditorController.cs:line 27
+2019-09-03 20:08:00.934 +05:30 [Information] Executed action method "EditorAPI.controllers.EditorController.GetContent (EditorAPI)", returned result "Microsoft.AspNetCore.Mvc.OkResult" in 283.8758ms.
+2019-09-03 20:08:00.946 +05:30 [Information] Executing HttpStatusCodeResult, setting HTTP status code 200
+2019-09-03 20:08:00.956 +05:30 [Information] Executed action "EditorAPI.controllers.EditorController.GetContent (EditorAPI)" in 336.158ms
+2019-09-03 20:08:00.966 +05:30 [Information] Request finished in 361.9148ms 200 
+2019-09-03 20:08:55.671 +05:30 [Information] Request starting HTTP/1.1 GET http://localhost:60837/api/editor  
+2019-09-03 20:08:55.680 +05:30 [Information] Route matched with "{action = \"GetContent\", controller = \"Editor\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult GetContent()" on controller "EditorAPI.controllers.EditorController" ("EditorAPI").
+2019-09-03 20:08:55.703 +05:30 [Information] Executing action method "EditorAPI.controllers.EditorController.GetContent (EditorAPI)" - Validation state: Valid
+2019-09-03 20:08:55.703 +05:30 [Verbose] Editor API called
+2019-09-03 20:08:56.087 +05:30 [Error] Error occured
+System.Exception: Error occured
+   at EditorAPI.controllers.EditorController.GetContent() in D:\EditorApp\EditorAPI\controllers\EditorController.cs:line 27
+2019-09-03 20:08:56.124 +05:30 [Information] Executed action method "EditorAPI.controllers.EditorController.GetContent (EditorAPI)", returned result "Microsoft.AspNetCore.Mvc.OkResult" in 384.1777ms.
+2019-09-03 20:08:56.158 +05:30 [Information] Executing HttpStatusCodeResult, setting HTTP status code 200
+2019-09-03 20:08:56.168 +05:30 [Information] Executed action "EditorAPI.controllers.EditorController.GetContent (EditorAPI)" in 477.8196ms
+2019-09-03 20:08:56.301 +05:30 [Information] Request finished in 542.1375ms 200 
+2019-09-03 20:09:19.651 +05:30 [Information] Request starting HTTP/1.1 GET http://localhost:60837/api/editor  
+2019-09-03 20:09:19.657 +05:30 [Information] Route matched with "{action = \"GetContent\", controller = \"Editor\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult GetContent()" on controller "EditorAPI.controllers.EditorController" ("EditorAPI").
+2019-09-03 20:09:19.664 +05:30 [Information] Executing action method "EditorAPI.controllers.EditorController.GetContent (EditorAPI)" - Validation state: Valid
+2019-09-03 20:09:19.664 +05:30 [Verbose] Editor API called
+2019-09-03 20:09:19.977 +05:30 [Error] Error occured
+System.Exception: Error occured
+   at EditorAPI.controllers.EditorController.GetContent() in D:\EditorApp\EditorAPI\controllers\EditorController.cs:line 27
+2019-09-03 20:09:20.044 +05:30 [Information] Executed action method "EditorAPI.controllers.EditorController.GetContent (EditorAPI)", returned result "Microsoft.AspNetCore.Mvc.OkResult" in 313.7657ms.
+2019-09-03 20:09:20.125 +05:30 [Information] Executing HttpStatusCodeResult, setting HTTP status code 200
+2019-09-03 20:09:20.140 +05:30 [Information] Executed action "EditorAPI.controllers.EditorController.GetContent (EditorAPI)" in 468.4724ms
+2019-09-03 20:09:20.152 +05:30 [Information] Request finished in 496.7505ms 200 

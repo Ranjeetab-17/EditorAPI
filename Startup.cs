@@ -37,6 +37,10 @@ namespace EditorAPI
         {
             services.AddMvc();
             services.AddLogging();
+            services.AddCors(c =>
+            {
+                c.AddPolicy("AllowOrigin", options => options.AllowAnyOrigin());
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -57,8 +61,15 @@ namespace EditorAPI
                      defaults: "{controller=Editor}"
                     );
             });
-            
+
             app.UseStaticFiles();
+
+            app.UseCors(options =>
+            {
+                options.AllowAnyOrigin();
+                options.AllowAnyHeader();
+                options.AllowCredentials();
+            });
 
             Log.Logger =
              new LoggerConfiguration()
@@ -68,6 +79,8 @@ namespace EditorAPI
                .CreateLogger();
 
             loggerFactory.AddSerilog();
+
+
 
             ////loggerFactory.AddConsole(Configuration.GetSection("Logging")); //log levels set in your configuration
             ////loggerFactory.AddDebug(); //does all log levels
