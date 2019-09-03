@@ -7,13 +7,21 @@ using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using Serilog;
 
 namespace EditorAPI
 {
     public class Program
     {
         public static void Main(string[] args)
-        {
+        {            
+            ////Log.Logger = new LoggerConfiguration()
+            ////.MinimumLevel.Verbose()
+            ////.MinimumLevel.Error()
+            ////.WriteTo.Console()
+            ////.WriteTo.File($"Logs\\{appname.Name}_.txt", rollingInterval: RollingInterval.Day)
+            ////.CreateLogger();
+
             CreateWebHostBuilder(args).Build().Run();
         }
 

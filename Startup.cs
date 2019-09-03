@@ -8,6 +8,10 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Serilog;
+
+////using Microsoft.Extensions.Logging;
+////using Serilog;
 
 namespace EditorAPI
 {
@@ -16,7 +20,7 @@ namespace EditorAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
 
-        private readonly ILogger _logger;
+        ///private readonly ILogger _logger;
 
         public Startup(IConfiguration configuration, ILogger<Startup> logger)
         {
@@ -24,7 +28,10 @@ namespace EditorAPI
             _logger = logger;
         }
 
+
         public IConfiguration Configuration { get; }
+
+        private ILogger<Startup> _logger;
 
         public void ConfigureServices(IServiceCollection services)
         {
@@ -35,23 +42,41 @@ namespace EditorAPI
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
+            var appname = System.Reflection.Assembly.GetExecutingAssembly().GetName().Name;
+
             if (env.IsDevelopment())
             {
-                _logger.LogInformation(env.EnvironmentName);
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseMvc();
+            app.UseMvc(routes =>
+            {
+                routes.MapRoute(
+                     name: "default",
+                     template: "api/[controller]",
+                     defaults: "{controller=Editor}"
+                    );
+            });
+            
             app.UseStaticFiles();
 
-            ////loggerFactory.AddFile("logFileFromHelper.log");
-            loggerFactory.AddConsole(Configuration.GetSection("Logging")); //log levels set in your configuration
-            loggerFactory.AddDebug(); //does all log levels
+            Log.Logger =
+             new LoggerConfiguration()
+               .MinimumLevel.Verbose()
+               .WriteTo.Console()
+               .WriteTo.RollingFile(@"Logs\" + appname + "-{Date}.txt")
+               .CreateLogger();
 
-            app.Run(async (context) =>
-            {
-                await context.Response.WriteAsync("Hello World!");
-            });
+            loggerFactory.AddSerilog();
+
+            ////loggerFactory.AddConsole(Configuration.GetSection("Logging")); //log levels set in your configuration
+            ////loggerFactory.AddDebug(); //does all log levels
+            ////loggerFactory.AddFile("logFileFromHelper.log");
+
+            ////app.Run(async (context) =>
+            ////{
+            ////    await context.Response.WriteAsync("Hello World!");
+            ////});
         }
     }
 }

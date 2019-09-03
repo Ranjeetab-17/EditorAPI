@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using EditorAPI.Tools;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Serilog;
 
 namespace EditorAPI.controllers
 {
@@ -12,12 +13,25 @@ namespace EditorAPI.controllers
     [ApiController]
     public class EditorController : ControllerBase
     {
-        [HttpGet]
+        [HttpGet,Route("")]
         public ActionResult GetContent()
         {
-            var text = System.IO.File.ReadAllText(@"DITAs/template.dita");
-            text.ToHtml(@"",@"");
-            return Ok("Editor Works...");
+            Log.Verbose("Editor API called");
+
+            try
+            {
+                var text = System.IO.File.ReadAllText(@"DITAs/template.dita");
+                text.ToHtml(@"XMLs/input.xml", @"XMLs/output.xml");
+
+                var result = System.IO.File.ReadAllText("XMLs/output.xml");
+                throw new Exception("Error occured");
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex, ex.Message);
+            }
+
+            return Ok();
         }
     }
 }

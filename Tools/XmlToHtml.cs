@@ -16,7 +16,7 @@ namespace EditorAPI.Tools
             doc.Save(saveTo);
             XslTransform myXslTransform;
             myXslTransform = new XslTransform();
-            myXslTransform.Load("tool.xslt");
+            myXslTransform.Load("XSLTs/tool.xsl");
             myXslTransform.Transform(saveTo, outputpath);
         }
 

@@ -1,0 +1,8 @@
+2019-09-03 19:48:29.305 +05:30 [Information] Request starting HTTP/1.1 GET http://localhost:60837/  
+2019-09-03 19:48:29.305 +05:30 [Information] Request starting HTTP/1.1 DEBUG http://localhost:60837/  0
+2019-09-03 19:48:29.693 +05:30 [Information] Request finished in 399.1227ms 200 
+2019-09-03 19:50:00.124 +05:30 [Information] Request finished in 120966.6163ms 404 
+2019-09-03 19:50:51.198 +05:30 [Information] Request starting HTTP/1.1 GET http://localhost:60837/api/editor  
+2019-09-03 19:50:51.743 +05:30 [Information] Route matched with "{action = \"GetContent\", controller = \"Editor\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult GetContent()" on controller "EditorAPI.controllers.EditorController" ("EditorAPI").
+2019-09-03 19:50:51.777 +05:30 [Information] Executing action method "EditorAPI.controllers.EditorController.GetContent (EditorAPI)" - Validation state: Valid
+2019-09-03 19:51:26.083 +05:30 [Verbose] Editor API called

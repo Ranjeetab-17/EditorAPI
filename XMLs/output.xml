@@ -1,0 +1,12 @@
+﻿<html>
+  <body>
+    <form method="post" action="edittool.asp">
+      <h2>Tool Information (edit):</h2>
+      <table border="0">
+      </table>
+      <br>
+      <input type="submit" id="btn_sub" name="btn_sub" value="Submit">
+      <input type="reset" id="btn_res" name="btn_res" value="Reset">
+    </form>
+  </body>
+</html>
